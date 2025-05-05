@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f6ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #2952a3;
+    font-weight: bold;
+}
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+.tab-button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    min-width: 140px;
+}
+.tab-button:hover {
+    background-color: #3367d6;
+}
+.tab-button.active {
+    background-color: #3367d6;
+    font-weight: bold;
+}
+.search-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+input[type="text"]:focus {
+    border-color: #4285f4;
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+.word-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin: 20px 0;
+    text-align: center;
+}
+.japanese {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+.romaji {
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 18px;
+}
+.quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+.option-button {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    text-align: center;
+}
+.option-button:hover {
+    background-color: #f8f8f8;
+    border-color: #bbb;
+}
+.option-button.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+.option-button.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+.control-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.control-button {
+    background-color: #f1f3f4;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.control-button:hover {
+    background-color: #e8eaed;
+}
+.progress-container {
+    height: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.progress-bar {
+    height: 100%;
+    background-color: #4285f4;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+.list-view {
+    display: none;
+}
+.word-list {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: white;
+}
+.word-item {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+.word-item:hover {
+    background-color: #f8f9fa;
+}
+.word-item:last-child {
+    border-bottom: none;
+}
+.word-item .japanese-sm {
+    font-weight: bold;
+    width: 30%;
+}
+.word-item .meaning-sm {
+    color: #666;
+    width: 70%;
+}
+.no-results {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #666;
+}
+.quiz-score {
+    font-weight: bold;
+}
+.info-text {
+    text-align: center;
+    margin: 20px 0;
+    color: #666;
+    font-style: italic;
+}
+@media (max-width: 600px) {
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+    .tab-button {
+        min-width: 120px;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
