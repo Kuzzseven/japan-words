@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Япон-Монгол үгийн толлоом</title>
+    <!-- CSS styles will be in a separate file -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Япон-Монгол үгийн толлоом</h1>
+        </header>
+
+        <div class="tab-container">
+            <button class="tab-button active" data-tab="jp-to-mn">Япон → Монгол</button>
+            <button class="tab-button" data-tab="mn-to-jp">Монгол → Япон</button>
+            <button class="tab-button" data-tab="word-list">Бичгээр хариулах</button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Хайх үгээ бичнэ үү...">
+        </div>
+
+        <!-- JP to MN Quiz -->
+        <div class="tab-content active" id="jp-to-mn">
+            <div class="quiz-header">
+                <span class="quiz-count">1/10</span>
+                <span class="quiz-score">Оноо: 0</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="word-card">
+                <div class="japanese" id="quiz-word">財布</div>
+                <div class="romaji" id="quiz-romaji">saifu</div>
+                
+                <div class="quiz-options">
+                    <button class="option-button">түрийвч</button>
+                    <button class="option-button">гутал</button>
+                    <button class="option-button">батц</button>
+                    <button class="option-button">үс</button>
+                </div>
+            </div>
+            <div class="control-buttons">
+                <button class="control-button" id="prev-word">Өмнөх</button>
+                <button class="control-button" id="random-word">Санамсаргүй</button>
+                <button class="control-button" id="next-word">Дараах</button>
+            </div>
+        </div>
+
+        <!-- MN to JP Quiz -->
+        <div class="tab-content" id="mn-to-jp">
+            <div class="quiz-header">
+                <span class="quiz-count">1/10</span>
+                <span class="quiz-score">Оноо: 0</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="word-card">
+                <div class="meaning" style="font-size: 32px; margin-bottom: 20px;">түрийвч</div>
+                
+                <div class="quiz-options">
+                    <button class="option-button">わたし</button>
+                    <button class="option-button">財布</button>
+                    <button class="option-button">くつ</button>
+                    <button class="option-button">かばん</button>
+                </div>
+            </div>
+            <div class="control-buttons">
+                <button class="control-button" id="prev-word-mn">Өмнөх</button>
+                <button class="control-button" id="random-word-mn">Санамсаргүй</button>
+                <button class="control-button" id="next-word-mn">Дараах</button>
+            </div>
+        </div>
+
+        <!-- Word List View -->
+        <div class="tab-content" id="word-list">
+            <div class="search-results">
+                <div class="word-card">
+                    <div class="japanese" id="detail-word">財布</div>
+                    <div class="romaji" id="detail-romaji">saifu</div>
+                    
+                    <div class="quiz-options">
+                        <input type="text" placeholder="Хариултаа бичнэ үү" style="border-radius: 5px;">
+                        <button class="option-button" style="background-color: #4285f4; color: white;">Шалгах</button>
+                    </div>
+                </div>
+                <div class="control-buttons">
+                    <button class="control-button" id="prev-detail">Өмнөх</button>
+                    <button class="control-button" id="random-detail">Санамсаргүй</button>
+                    <button class="control-button" id="next-detail">Дараах</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript will be in a separate file -->
+</body>
+</html>
